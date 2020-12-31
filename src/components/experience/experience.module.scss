@@ -1,0 +1,67 @@
+@import '../../styles/index';
+
+div.experience {
+    margin-top: 15px;
+    padding: 15px;
+
+    & > p {
+        color: $light-blue;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-top: 0;
+        text-align: start;
+    }
+    & > div {
+        // display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &:hover {
+            a {
+                filter: blur(3px);
+            }
+        }
+    }
+    a {
+        // background-color: lightblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        text-align: start;
+        padding: 5px 0;
+        padding-right: 0;
+        transition: transform 0.2s ease;
+        z-index: 10;
+
+        &:hover {
+            filter: none !important;
+            transform: scale(1.1) translate(15px, 0px);
+            // box-shadow: 0px 0px 5px 2px rgba($secondary, 0.1);
+        }
+
+        img {
+            padding: 0 15px;
+            max-width: 120px;
+            object-fit: contain;
+            padding-left: 0;
+        }
+
+        & > div {
+            // display: none;
+            // padding: 10px;
+
+            p:first-child {
+                color: $secondary;
+                // font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            p:last-child {
+                color: black;
+                color: $secondary;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

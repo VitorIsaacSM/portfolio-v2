@@ -1,0 +1,86 @@
+@import 'src/styles/index';
+
+.qualities {
+    position: relative;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: 1100px;
+    max-width: 90vw;
+
+    & > div {
+        width: 100%;
+    }
+
+    .item {
+        // display: flex !important;
+        flex-flow: column;
+        align-items: center;
+        max-width: 350px;
+        // width: 350px !important;
+        height: 250px;
+        padding: 1.5rem;
+        border: none !important;
+        outline: none !important;
+        img {
+            height: 60px;
+            margin: auto;
+            object-fit: contain;
+        }
+
+        p.title {
+            color: $light-blue;
+            font-weight: bold;
+        }
+
+        p.desc {
+            color: $secondary;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    }
+
+    i.arrowBack, i.arrowNext {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .arrowBack {
+        position: absolute;
+        left: -20px;
+        font-size: 3rem;
+        color: $light-blue;
+
+        @include phone-md {
+            left: 0;
+            font-size: 2rem;
+        }
+    }
+
+    i.arrowNext {
+        position: absolute;
+        right: -20px;
+        font-size: 3rem;
+        color: $light-blue;
+
+        @include phone-md {
+            right: 0;
+            font-size: 2rem;
+        }
+    }
+
+    @include phone-lg {
+        width: 650px;
+    }
+
+    @include phone-md {
+        height: 250px;
+        .item {
+            height: 200px;
+        }
+    }
+}

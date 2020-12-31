@@ -1,0 +1,47 @@
+@import './colors';
+
+@mixin page {
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+    // max-height: auto;
+    width: 100%;
+    padding: 50px;
+
+    .pageTitle {
+        color: $secondary;
+        font-weight: normal;
+        font-size: 2rem;
+        border-bottom: 3px solid $secondary;
+    }
+
+    .outlineBtn {
+        transition: background-color 0.1s linear;
+        margin-top: 1.2rem;
+        font-size: 1.3rem;
+        padding: 10px 20px;
+        border: 2px solid white;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: 300;
+
+        &:hover {
+            background-color: white;
+            color: $secondary;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        i {
+            margin-left: 10px;
+        }
+    }
+
+    @include phone-md {
+        padding: 25px;
+    }
+}
