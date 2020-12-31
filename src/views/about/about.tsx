@@ -5,6 +5,7 @@ import profile from '../../assets/images/profile2.jpg';
 import Specialties from '../../components/specialties/specialties';
 import { Section } from '../../components/Section';
 import Experience from '../../components/experience/experience';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const About = () => {
 
@@ -13,9 +14,11 @@ const About = () => {
       <p className={styles.pageTitle}>
         Sobre mim
       </p>
-      <Qualities />
+      <ScrollAnimation animateIn="fadeInDown">
+        <Qualities/>
+      </ScrollAnimation>
       <div className={styles.info}>
-        <Section>
+        <ScrollAnimation animateIn="fadeInLeft">
           <div className={styles.bgAlt}></div>
           <img src={profile} alt="profile pic"/>
           <p>Quem sou eu?</p>
@@ -24,15 +27,14 @@ const About = () => {
             Sou um entusiasta das novas tecnologias e frameworks de Javascript.
             Atualmente curso Engenharia de Computação na PUCRS.
           </p>
-        </Section>
+        </ScrollAnimation>
         <div>
-          <Section>
+          <ScrollAnimation animateIn="fadeInRight">
             <Specialties />
-          </Section>
-          {/* <div className={styles.hr}></div> */}
-          <Section>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInUp">
             <Experience />
-          </Section>
+          </ScrollAnimation>
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ div.about {
                 top: 0;
                 left: -500px;
                 bottom: 0;
-                width: 500px;
+                width: 510px;
                 background-color: $secondary;
             }
 
@@ -64,7 +64,7 @@ div.about {
         }
 
         & > div:last-child {
-            flex: 3;
+            flex: 4;
 
             .hr {
                 border-color: $secondary !important;
