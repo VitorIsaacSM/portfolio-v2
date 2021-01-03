@@ -19,21 +19,21 @@ const Experience = () => {
     {
       company: 'Goclin',
       role: 'Head do Front-end',
-      desc: 'Coordenar o desenvolvimento de todo o Front-end da aplicação, garantindo a qualidade e manentabilidade do código. Além é claro de desenvolver e também fazer uso de testes unitários e E2E.',
+      desc: 'Coordenar e participar do desenvolvimento do Front-end da aplicação, garantindo a qualidade e manentabilidade do código. Trabalhando com Vue.js e muitas outras ferramentas atuais.',
       image: goclin,
       url: 'https://www.goclin.com'
     },
     {
       company: 'Hammer Consult',
       role: 'Desenvolvedor Front-end',
-      desc: 'Coordenar o desenvolvimento de todo o Front-End da aplicação, garantindo a qualidade e manentabilidade do código. Além é claro de desenvolver e também fazer uso de testes unitários e E2E.',
+      desc: 'Trabalhei em projetos de grandes empresas nacionais, utilizando principalmente Angular e React. Construi aplicações modernas e multiplataforma, aplicando técnicas de SEO e Google Analytics.',
       image: hammer,
       url: 'https://www.wlgrupo.com/hammer/'
     },
     {
       company: 'DBServer',
       role: 'Desenvolvedor Full-stack',
-      desc: 'Coordenar o desenvolvimento de todo o Front-End da aplicação, garantindo a qualidade e manentabilidade do código. Além é claro de desenvolver e também fazer uso de testes unitários e E2E.',
+      desc: 'Desenvolvimento de aplicações web utilizando Java e Angular, aplicando metodologias ágeis, integração contínua, Test Driven Development e Design Patterns.',
       image: db,
       url: 'https://www.dbserver.com.br/'
     }
@@ -44,7 +44,7 @@ const Experience = () => {
       <p>Experiência</p>
       <div>
         {list.map(exp => (
-          <a href={exp.url} target="_blank">
+          <a href={exp.url} target="_blank" rel="noreferrer" key={exp.url}>
             <img src={exp.image} alt="company logo" />
             <div>
               {/* <p>{exp.company}</p> */}

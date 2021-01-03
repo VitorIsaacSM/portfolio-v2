@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren, useEffect } from 'react';
 import styles from './qualities.module.scss';
 import jsIcon from '../../assets/qualities/js.svg';
 import agileIcon from '../../assets/qualities/agile.svg'
@@ -10,8 +10,9 @@ import Slider from 'react-slick'
 import { isPhoneScreen } from '../../utils/consts';
 
 export interface SliderComponent {
-  slickNext: () => void,
-  slickPrev: () => void
+  slickNext: () => void;
+  slickPrev: () => void;
+  slickPlay: () => void;
 }
 
 export interface Quality {
@@ -22,7 +23,7 @@ export interface Quality {
 
 let slider: SliderComponent = null
 
-const Qualities = () => {
+const Qualities = (props: PropsWithChildren<{autoplay: boolean}>) => {
 
   const list: Quality[] = [
     {
@@ -66,13 +67,17 @@ const Qualities = () => {
     // centerMode: true,
     centerPadding: '50px',
     speed: 600,
-    autoplay: true,
-    autoplaySpeed: 5000,
+    autoplay: !!props.autoplay,
+    autoplaySpeed: 4000,
     slidesToShow: isPhoneScreen() ? 1 : 3,
     slidesToScroll: 1,
     rows: 1,
     arrows: false
   };
+
+  useEffect(() => {
+    if (props.autoplay) slider.slickPlay()
+  }, [props.autoplay])
 
   return (
     <div className={styles.qualities}>

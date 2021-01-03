@@ -63,5 +63,10 @@ div.experience {
                 font-size: 0.8rem;
             }
         }
+
+        @include phone-md {
+            flex-flow: column;
+            align-items: center;
+        }
     }
 }

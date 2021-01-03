@@ -59,8 +59,8 @@ const Specialties = () => {
         <p>Especialidades</p>
         <div className={styles.list}>
           {list.map((sp, index) => (
-            <a href={sp.url} target="_blank">
-              <img src={sp.icon} alt={sp.name} key={index} />
+            <a href={sp.url} target="_blank" rel="noreferrer" key={index}>
+              <img src={sp.icon} alt={sp.name} />
             </a>
           ))}
         </div>

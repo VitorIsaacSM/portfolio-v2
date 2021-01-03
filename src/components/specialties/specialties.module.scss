@@ -29,5 +29,9 @@ div.specialties {
                 transform: scale(1.25);
             }
         }
+
+        @include phone-md {
+            flex-wrap: wrap;
+        }
     }
 }

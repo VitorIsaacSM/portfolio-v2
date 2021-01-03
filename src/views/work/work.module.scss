@@ -1,0 +1,209 @@
+@import '../../styles/index';
+
+div.work {
+    @include page;
+    background-color: $light-gray;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    // align-items: flex-start;
+
+    @include phone-lg {
+        min-height: unset;
+        padding-bottom: 100px;
+    }
+
+    @include phone-md {
+        min-height: unset;
+        padding: 20px;
+    }
+
+    .pageTitle {
+        margin-bottom: 2rem;
+    }
+
+    div.list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        
+        & > div {
+            padding: 20px;
+            max-width: 50%;
+            min-width: 50%;
+            height: 350px;
+            
+            & > div.item {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                box-shadow: 1px 1px 10px 3px rgba($secondary, 0.2);
+                img {
+                    transition: transform 0.2s ease;
+                    width: 100%;
+                    object-fit: contain;
+                    padding: 50px;
+
+                    @include phone-lg {
+                        padding: 30px;
+                    }
+                }
+    
+                background-color: white;
+    
+                &.goclinLogo {
+                    position: relative;
+                    background-color: #3BA0EA;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background: url("./../../assets/images/bg-doctor.jpg") no-repeat;
+                        background-size: cover;
+                        background-position: right;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-color: rgba(#3BA0EA, 0.8);
+                    }
+                    img {
+                        position: relative;
+                        padding: 85px;
+                        z-index: 2;
+
+                        
+                        @include phone-lg {
+                            padding: 50px;
+                        }
+
+                        @include phone-md {
+                            padding: 55px
+                        }
+                    }
+                }
+
+                &.nexoLogo {
+                    // background: rgb(14,114,254);
+                    // background: linear-gradient(90deg, rgba(14,114,254,1) 0%, rgba(74,185,255,1) 100%, rgba(33,157,255,1) 100%);
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background: url("./../../assets/images/bg-nexo2.jpg") no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                    img {
+                        position: relative;
+                        padding: 85px;
+
+                        @include phone-lg {
+                            padding: 40px !important;
+                        }
+
+                        
+                        @include phone-md {
+                            padding: 40px
+                        }
+                    }
+                }
+
+                &.inno2bLogo {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background: url("./../../assets/images/bg-inno.png") no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                    img {
+                        padding: 30px;
+                        position: relative;
+
+                        @include phone-lg {
+                            padding: 45px !important;
+                        }
+                    }
+                }
+                & > div.itemInfo {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    padding: 35px;
+                    position: absolute;
+                    color: white;
+                    top: 0; left: 0; width: 100%; height: 100%;
+                    transition: opacity 0.3s ease;
+                    opacity: 0;
+                    background-color: rgba($secondary, 0.98);
+                    color: white;
+                    z-index: 2;
+
+                    a {
+                        position: absolute;
+                        bottom: 35px;
+                        color: white;
+                        text-decoration: none;
+                        border: 2px solid $primary;
+                        border-radius: 20px;
+                        padding: 10px 15px;
+                        transition: transform 0.2s ease;
+
+                        @include phone-md {
+                            bottom: 20px;
+                        }
+
+                        i {
+                            margin-left: 8px;
+                            font-size: 0.9rem;
+                        }
+
+                        &:hover {
+                            transform: scale(1.2)
+                            // color: #141c3a;
+                            // background-color: white;
+                        }
+                    }
+                }
+            }
+
+
+            &:hover {
+
+                div.item {
+                    img {
+                        transform: scale(1.1);
+                    }
+                    div.itemInfo {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            @include phone-md {
+                width: 100%;
+                max-width: 90vw;
+                height: 240px;
+
+                div.item {
+                    & > div.itemInfo {
+                        padding: 10px
+                    }
+                }
+            }
+        }
+
+    }
+}

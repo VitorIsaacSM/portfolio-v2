@@ -14,6 +14,11 @@
         font-weight: normal;
         font-size: 2rem;
         border-bottom: 3px solid $secondary;
+        line-height: 2;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     .outlineBtn {
@@ -38,6 +43,27 @@
 
         i {
             margin-left: 10px;
+        }
+    }
+
+    .linkStyle {
+        cursor: pointer;
+        transition: color 0.5s ease;
+        position: relative;
+        &:after {
+            content: "";
+            position: relative;
+            transition: width 0.3s ease;
+            height: 1px;
+            background-color: $primary;
+            width: 0px;
+            display: block;
+        }
+        &:hover {
+            color: $primary;
+            &:after {
+                width: 100%;
+            }
         }
     }
 

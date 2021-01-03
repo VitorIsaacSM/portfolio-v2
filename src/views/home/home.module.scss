@@ -8,16 +8,24 @@ div.home {
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    text-shadow: 1px 1px 45px rgba(0,0,0, 1);
 
     .mainText {
         font-size: 2rem;
         span {
             color: $primary;
         }
+        text-shadow: 2px 2px rgba(0,0,0, 1);
     }
     .subText {
         font-size: 1.6rem;
+        text-shadow: 2px 2px rgba(0,0,0, 1);
+    }
+
+    .outlineBtn {
+        text-shadow: 2px 2px rgba(0,0,0, 1);
+        &:hover {
+            text-shadow: none;
+        }
     }
 
     p {

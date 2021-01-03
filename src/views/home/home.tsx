@@ -1,4 +1,4 @@
-import React, { CSSProperties, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { scrollToId } from '../../utils/consts';
 import styles from './home.module.scss';
 

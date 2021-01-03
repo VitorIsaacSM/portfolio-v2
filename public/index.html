@@ -5,6 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta property="og:image" content="%PUBLIC_URL%/ogimage.png">
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -47,22 +48,28 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>
+
+    const isPhone = window.screen.width < 700;
+
+    const points = isPhone ? 5.00 : 8.00
+    const maxDistance = isPhone ? 40 : 28
+    const spacing = isPhone ? 55 : 25
     
     window.setVanta = () => {
       if (window.VANTA) window.VANTA.NET({
         el: "#home",
         mouseControls: true,
         touchControls: true,
-        gyroControls: false,
+        gyroControls: true,
         color: 0x61dafb,
         backgroundColor: 0x282c34,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        points: 6.00,
-        maxDistance: 25.00,
-        spacing: 28.00
+        minHeight: 10.00,
+        minWidth: 10.00,
+        scale: 1.0,
+        scaleMobile: 1,
+        points,
+        maxDistance,
+        spacing
       })
     }
     // _strk.push(function() {
